@@ -1,0 +1,64 @@
+﻿ID,Title,Use case,Priority,Type,Preconditions,Test data,Steps,Expected result,Actual result,Automated?
+JB-001,Login with valid credentials (email id),UC-01 Authentication and session,P0,Functional,User qa.user1 is registered and active,Email/Password: qa.user1@example.com,"1. Open /login
+2. Enter email
+3. click confirm email and enter code",User is redirected to job dashboard; user menu shows 'qa.user1';,user signed up / logged in successfully with only email id,yes
+JB-002,Login fails with invalid email id,UC-01 Authentication and session,P0,Negative,User qa.user2 is not registered,Email: Invalid-qa.user2@example.com,"1. Open /login
+2. Enter invalid email
+3. confirm email",Error 'Invalid email' should've been shown; user stays on /sign-in;,A code was sent to the entered invalid email id,Yes
+JB-003,Login with both fields empty,UC-01 Authentication and session,P1,Validation,None,"Email: (empty)
+Password: (empty)","1. Open /sign-in
+2. Click Login without entering data",Inline messages 'Email is required' and 'Password is required' appear; no API call is sent,Inline messages 'Email is required' and 'Password is required' appear; no API call is sent,Yes
+RB-001,Upload file above size limit,UC-10 Resume export and upload,P2,Validation,Upload limit is 5 MB,File: large_resume.pdf (6 MB),"1. Click Upload
+2. Select large_resume.pdf",File is rejected with a size-limit message,File upload unsuccessful / rejected,
+RB-002,Upload unsupported file type,UC-10 Resume export and upload,P1,Negative,Logged in; upload page open,File: installer.exe (2 MB),"1. Click Upload
+2. Select installer.exe","File is rejected with 'Only PDF, DOC, DOCX allowed'; nothing is saved",File upload unsuccessful / rejected,
+JB-004,Search by keyword and location,UC-02 Job search by keyword and location,P0,Functional,Seeded jobs exist: 'QA Engineer' in Bengaluru and Pune,"Keyword: QA Engineer
+Location: Bengaluru","1. Open /jobs
+2. Enter keyword and location
+3. Click Search",Every card shows a title containing 'QA Engineer' and location 'Bengaluru'; Pune job is absent; result count equals cards shown,Yes,
+BUG-001,No close button in Account settings page,Functional,P2,Functional,Account details page to be opened,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,

@@ -1,0 +1,5 @@
+# Ignore the specific login credentials file
+#
+
+# Or ignore all .env files safely
+.env*
